@@ -1,0 +1,24 @@
+sudo apt install certbot
+
+sudo certbot certonly --standalone -d clever-bell.5-250-184-231.plesk.page -d www.clever-bell.5-250-184-231.plesk.page
+
+1- Ponemos nuestro correo
+2- Aceptamos
+3- Compartir correo ? , No
+
+Ahora nos dira en un texto , donde se han guardado las diferentes partes del certificado.
+
+El comando anterior nos generará un .pem
+
+sudo apt install openssl
+
+Cambiar solo los nombres, la ruta por defecto suele ser esa.
+
+sudo openssl pkcs12 -export -out /tmp/clever-bell.5-250-184-231.plesk.page_fullchain_and_key.p12 -in /etc/letsencrypt/live/clever-bell.5-250-184-231.plesk.page/fullchain.pem -inkey /etc/letsencrypt/live/clever-bell.5-250-184-231.plesk.page/privkey.pem -name tomcat
+
+Con este tendremos el certificado pkcs12 (.p12) , en /tmp/clever-bell.5-250-184-231.plesk.page_fullchain_and_key.p12 , que es el -out que pusimos en el comando anterior.
+
+
+Ya con esto tendremos la contraseña que será la que nos pidio antes y ademas el propio certificado , ya con esto terminamos.
+
+Copiar el certificado y ponerlo en src/main/resources
