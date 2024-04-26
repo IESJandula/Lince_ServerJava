@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: default
   jpa.hibernate.ddl-auto: create
   datasource:
     url: jdbc:mysql://localhost:3306/proyecto_lince
