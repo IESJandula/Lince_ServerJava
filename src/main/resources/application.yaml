@@ -3,7 +3,7 @@ spring:
     active: default
   jpa.hibernate.ddl-auto: create
   datasource:
-    url: jdbc:mysql://localhost:3306/proyecto_lince
+    url: jdbc:mysql://localhost:3306/lince_serverjava
     username: root
     password: 7_ap49y4z$n
     hikari:
