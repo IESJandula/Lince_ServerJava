@@ -23,3 +23,5 @@ logging:
         max-size: 1MB
         max-history: 10
         total-size-cap: 10MB
+reaktor:
+  publicKeyFile: C:\claves\public_key.pem
