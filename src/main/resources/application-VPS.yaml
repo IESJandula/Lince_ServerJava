@@ -1,17 +1,17 @@
 spring:
   jpa.hibernate.ddl-auto: validate
   datasource:
-    url: jdbc:mysql://localhost:3306/lince_serverjava
+    url: jdbc:mysql://localhost:3306/lince_serverjava?createDatabaseIfNotExist=true
     username: root
-    password: qP8u-Ab80S_
+    password: ${DB_PASSWORD}
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
 server:
   port: 8090
   ssl:
-    key-store: classpath:microservices-iesjandula.duckdns.org.p12
-    key-store-password: 1133557799
+    key-store: classpath:apijandula.p12
+    key-store-password: ${SSL_KEY_STORE_PASSWORD}
     keyStoreType: PKCS12
 logging:
     level:
