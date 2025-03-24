@@ -29,10 +29,8 @@ import es.iesjandula.proyecto_lince_server.respositories.IRegisterRepository;
  */
 @RestController
 @RequestMapping("/proyectolince")
-@CrossOrigin(origins = "*")
 public class ProyectoLinceRest
 {
-
 	/** Attribute adminChatRepository*/
 	@Autowired
 	private IBanedUsers banedUsersRepository;
