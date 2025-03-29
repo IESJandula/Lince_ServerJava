@@ -1,20 +1,14 @@
 spring:
-  profiles:
-    active: default
-  jpa.hibernate.ddl-auto: create
+  jpa.hibernate.ddl-auto: none
   datasource:
-    url: jdbc:mysql://localhost:3306/lince_serverjava
+    url: jdbc:mysql://localhost:3306/lince_serverjava?createDatabaseIfNotExist=true
     username: root
-    password: 7_ap49y4z$n
+    password: toor
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
 server:
   port: 8090
-  ssl:
-    key-store: classpath:clever-bell.5-250-184-231.plesk.page_fullchain_and_key.p12
-    key-store-password: 123456
-    keyStoreType: PKCS12
 logging:
     level:
         root: INFO
